@@ -71,7 +71,7 @@ nav{
 
 footer{
   background-color: black;
-  color: white;
+  color: black;
   padding-top: 30px;
   text-align: center;
 }
@@ -107,7 +107,9 @@ footer{
 
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-
+main{
+  background-color: gray;
+}
 li:nth-child(n):hover{
   text-decoration: underline;
 }
@@ -125,7 +127,7 @@ li:nth-child(n):focus{
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
 
 .skip:focus{
-  position: relative;
+  position: absolute;
   top: 20px;
 }
 /* Step 3: Write selector/rule property to style all elements when in focus*/
@@ -136,7 +138,7 @@ li:nth-child(n):focus{
 
 /* Step 4: Write selector/rule property to style the container */
 
-
+@media only screen and (max-width: 800px){
 .container{
   display:grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -201,13 +203,65 @@ div:first-child{
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 .text-block{
-  display: flexbox;
   text-align: center;
   margin:auto;
 }
-
+}
 /* Add your media query here */
+@media only screen and (min-width: 800px){
+  
+  nav{
+    text-align: right;
+    padding: 30px 0 30px 0
+  }
+  .container
+  {
+    display: grid;
+    grid-template-columns: 50px auto 250px auto 50px;
+  }
+  div:first-child{
+    grid-column: 1/ span 5;
+    background-image: url("../images/header.jpg");
+  }
+  .about{
+    grid-column: 3 / span 2;
+    grid-row: 2;
+  }
+  .method{
+    grid-column: 2 / span 2;
+    grid-row: 3;
+  }
+  .clients{
+    grid-column: 3 / span 2;
+    grid-row: 4;
+  }
+  .contact{
+    grid-column: 2 / span 2;
+    grid-row: 5;
+  }
+  .about-image{
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+  .method-image{
+    grid-column: 3 / span 2;
+    grid-row: 3;
+  }
+  .clients-image{
+    grid-column: 2 / span 2;
+    grid-row: 4;
+  }
+  .contact-image{
+    grid-column: 3 / span 2;
+    grid-row: 5;
+  }
+  .text-block{
+    max-height: 250px;
+    overflow: visible;
+    text-align: center;
 
+  }
+}
 
   /* Step 9: Write the selector/rule property to style the nav element */
 
