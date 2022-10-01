@@ -221,6 +221,9 @@ div:first-child{
   }
   div:first-child{
     grid-column: 1/ span 5;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
     background-image: url("../images/header.jpg");
   }
   .about{
