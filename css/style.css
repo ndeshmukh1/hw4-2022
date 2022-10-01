@@ -69,9 +69,9 @@ nav{
   text-align: left;
 }
 
-footer{
+footer>p{
   background-color: black;
-  color: black;
+  color: white;
   padding-top: 30px;
   text-align: center;
 }
@@ -110,13 +110,13 @@ links in the navigation are in the hover or focus state.*/
 main{
   background-color: gray;
 }
+
 li:nth-child(n):hover{
   text-decoration: underline;
 }
 li:nth-child(n):focus{
   text-decoration: underline;
 }
-
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
 
 .skip{
@@ -138,12 +138,12 @@ li:nth-child(n):focus{
 
 /* Step 4: Write selector/rule property to style the container */
 
-@media only screen and (max-width: 800px){
 .container{
   display:grid;
   grid-template-columns: 1fr 5fr 1fr;
   gap: 15px;
 }
+
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
@@ -206,7 +206,6 @@ div:first-child{
   text-align: center;
   margin:auto;
 }
-}
 /* Add your media query here */
 @media only screen and (min-width: 800px){
   
@@ -221,10 +220,8 @@ div:first-child{
   }
   div:first-child{
     grid-column: 1/ span 5;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
     background-image: url("../images/header.jpg");
+    text-align-last: center;
   }
   .about{
     grid-column: 3 / span 2;
